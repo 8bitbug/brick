@@ -1,0 +1,46 @@
+Checks: >
+  -*,
+  llvm-*,
+  modernize-*,
+  readability-*,
+  cppcoreguidelines-*,
+  clang-analyzer-*,
+  performance-*,
+  misc-*,
+  readability-identifier-naming
+
+CheckOptions:
+  - key: readability-identifier-naming.ClassCase
+    value: UpperCamelCase
+  - key: readability-identifier-naming.StructCase
+    value: UpperCamelCase
+  - key: readability-identifier-naming.EnumCase
+    value: UpperCamelCase
+  - key: readability-identifier-naming.FunctionCase
+    value: camelBack
+  - key: readability-identifier-naming.VariableCase
+    value: camelBack
+  - key: readability-identifier-naming.GlobalVariableCase
+    value: gCamelBack
+  - key: readability-identifier-naming.ParameterCase
+    value: camelBack
+  - key: readability-identifier-naming.MacroDefinitionCase
+    value: UPPER_CASE
+  - key: readability-identifier-naming.ClassMemberCase
+    value: mCamelBack
+  - key: readability-identifier-naming.StaticMemberPrefix
+    value: s_
+  - key: readability-identifier-naming.EnumConstantCase
+    value: UpperCamelCase
+
+CheckOptions:
+  - key: modernize-use-override
+    value: true
+  - key: cppcoreguidelines-pro-type-cstyle-cast
+    value: true
+  - key: modernize-use-auto
+    value: true
+  - key: modernize-use-nullptr
+    value: true
+
+WarningsAsErrors: '*'

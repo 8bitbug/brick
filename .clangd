@@ -1,0 +1,45 @@
+CompileFlags:
+  Add: -std=c++20
+
+Diagnostics:
+  Suppress: []
+  ClangTidy: true
+  HeaderFilterRegex: '.*'
+  ClangTidyChecks: >
+    -*,
+    llvm-*,
+    modernize-*,
+    readability-*,
+    cppcoreguidelines-*,
+    clang-analyzer-*,
+    performance-*,
+    misc-*,
+    readability-identifier-naming
+
+InlayHints:
+  Enabled: true
+  ParameterNames: true
+  DeducedTypes: true
+  Designators: true
+
+Index:
+  Background: true
+  File: ''
+  External: ''
+
+Completion:
+  AllScopes: true
+  FilterAndSort: true
+  IncludeIneligibleResults: false
+
+Hover:
+  ShowDefinition: true
+  ShowDocComments: true
+
+ClangdArguments: 
+  - --background-index
+  - --header-insertion=never
+  - --all-scopes-completion
+  - --completion-style=detailed
+  - --cross-file-rename=true
+  - --function-arg-placeholders
